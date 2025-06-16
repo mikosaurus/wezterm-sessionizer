@@ -1,4 +1,4 @@
-print("testing")
+print("testinga")
 
 return {
 	apply_to_config = function(config) end,
