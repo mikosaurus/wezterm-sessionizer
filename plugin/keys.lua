@@ -8,17 +8,52 @@ M.keys = {
 	{
 		key = "c",
 		mods = "LEADER",
-		action = act.SpawnWindow,
+		action = act.SpawnTab("CurrentPaneDomain"),
 	},
 	{
 		key = "h",
 		mods = "ALT",
-		action = act.ActivateWindowRelative(-1),
+		action = act.ActivateTabRelative(-1),
 	},
 	{
 		key = "l",
 		mods = "ALT",
-		action = act.ActivateWindowRelative(1),
+		action = act.ActivateTabRelative(1),
+	},
+
+	-- Splitting tab in panes
+	{
+		key = "æ",
+		mods = "ALT",
+		action = act.SplitPane({
+			direction = "Right",
+		}),
+	},
+	{
+		key = "'",
+		mods = "ALT",
+		action = act.SplitPane({
+			direction = "Down",
+		}),
+	},
+
+	-- Copy and paste
+	{
+		key = "C",
+		mods = "CTRL",
+		action = act.CopyTo("ClipboardAndPrimarySelection"),
+	},
+	{
+		key = "v",
+		mods = "CTRL",
+		action = act.PasteFrom("Clipboard"),
+	},
+
+	-- Activate copy mode
+	{
+		key = "ø",
+		mods = "LEADER",
+		action = act.ActivateCopyMode,
 	},
 
 	-- Section for moving between panes
