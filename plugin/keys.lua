@@ -12,12 +12,13 @@ M.keys = {
 			local choices = {}
 
 			for _, workspace in ipairs(wezterm.mux.get_workspace_names()) do
-				table.insert(choices, { label = workspace })
+				table.insert(choices, { label = workspace, id = workspace })
 			end
 
 			window:perform_action(
 				wezterm.action.InputSelector({
 					action = wezterm.action_callback(function(inner_window, inner_pane, id, label)
+						print("selected: ", id, label)
 						if label then
 							inner_window:perform_action(act.SwitchToWorkspace({ name = label }), inner_pane)
 						elseif id then
@@ -28,7 +29,6 @@ M.keys = {
 					choices = choices,
 					fuzzy = true,
 					fuzzy_description = "Goto Workspace: ",
-					alphabet = "1234567890abcdefghijklmnopqrstuvwxyz",
 				}),
 				pane
 			)
