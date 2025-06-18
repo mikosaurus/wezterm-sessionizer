@@ -1,0 +1,18 @@
+Sessionizer:
+    ✔ Setup basic plugin structure
+    ☐ Set up keybinds
+        # ctrl space for leader
+        # leader c for new pane?
+        # leader d for detatch session?
+        # leader {(nor o) for copy mode
+        # leader }(nor ae) for split to the right (vertical?)
+        # leader l for clear term
+        # ctrl v for paste
+        # look into other keybinds i might want
+    ☐ Read up on what panes and other things are on the wezterm docs
+    Read up on what or if sessions are
+    Read up on how I could store a session
+        # This might be the same as tmux or allow for restoring after reboot
+        # Fuzzy finding to other sessions
+        # Store session templates maybe? idk for other ideas
+    ☐ Try to emulate tmux keybindings
