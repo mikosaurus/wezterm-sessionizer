@@ -8,7 +8,7 @@ M.keys = {
 		actions = wezterm.action.ActivatePaneDirection("Left"),
 	},
 	{
-		key = "h",
+		key = "H",
 		mods = "CTRL",
 		actions = wezterm.action.ActivatePaneDirection("Left"),
 	},
@@ -18,7 +18,7 @@ M.keys = {
 		actions = wezterm.action.ActivatePaneDirection("Right"),
 	},
 	{
-		key = "l",
+		key = "L",
 		mods = "CTRL",
 		actions = wezterm.action.ActivatePaneDirection("Right"),
 	},
@@ -28,7 +28,7 @@ M.keys = {
 		actions = wezterm.action.ActivatePaneDirection("Up"),
 	},
 	{
-		key = "k",
+		key = "K",
 		mods = "CTRL",
 		actions = wezterm.action.ActivatePaneDirection("Up"),
 	},
@@ -38,7 +38,7 @@ M.keys = {
 		actions = wezterm.action.ActivatePaneDirection("Down"),
 	},
 	{
-		key = "j",
+		key = "J",
 		mods = "CTRL",
 		actions = wezterm.action.ActivatePaneDirection("Down"),
 	},
