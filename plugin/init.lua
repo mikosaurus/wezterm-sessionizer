@@ -16,6 +16,7 @@ local keys = require("keys")
 local M = {}
 
 M.apply_to_config = function(config)
+	config.leader = { key = "Space", mods = "CTRL" }
 	config.keys = keys.keys
 end
 

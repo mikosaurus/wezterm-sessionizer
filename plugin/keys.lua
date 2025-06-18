@@ -3,6 +3,25 @@ local act = wezterm.action
 
 local M = {}
 M.keys = {
+
+	-- Section for tabs
+	{
+		key = "c",
+		mods = "leader",
+		action = act.SpawnWindow,
+	},
+	{
+		key = "h",
+		mods = "ALT",
+		action = act.ActivateWindowRelative(-1),
+	},
+	{
+		key = "l",
+		mods = "ALT",
+		action = act.ActivateWindowRelative(1),
+	},
+
+	-- Section for moving between panes
 	{
 		key = "LeftArrow",
 		mods = "CTRL",
