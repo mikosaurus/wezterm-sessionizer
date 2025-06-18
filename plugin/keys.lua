@@ -28,8 +28,8 @@ M.keys = {
 						if id and id == new_workspace_id then
 							inner_window:perform_action(act.PromptInputLine({
 								description = "Name for new workspace",
-								initial_value = "",
 								action = wezterm.action_callback(function(prompt_window, prompt_pane, line)
+									print("is line ? ", line)
 									if line then
 										prompt_window:perform_action(
 											act.SwitchToWorkspace({ name = line }),
