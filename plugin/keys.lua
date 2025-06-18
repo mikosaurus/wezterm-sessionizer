@@ -20,24 +20,20 @@ M.keys = {
 			window:perform_action(
 				act.InputSelector({
 					action = wezterm.action_callback(function(inner_window, inner_pane, id, label)
+						print("label and id: ", label, id)
 						if not label and not id then
 							-- nothing was selected (exit)
 							return
 						end
-						if id then
-							if id == new_workspace_id then
-								window:perform_action(act.PromtInputLine({
-									description = "Name for new workspace",
-									action = wezterm.action_callback(function(window, pane, line)
-										if line then
-											inner_window:perform_action(
-												act.SwitchToWorkspace({ name = line }),
-												inner_pane
-											)
-										end
-									end),
-								}))
-							end
+						if id and id == new_workspace_id then
+							inner_window:perform_action(act.PromtInputLine({
+								description = "Name for new workspace",
+								action = wezterm.action_callback(function(promt_window, promt_pane, line)
+									if line then
+										promt_window:perform_action(act.SwitchToWorkspace({ name = line }), promt_pane)
+									end
+								end),
+							}))
 						end
 
 						if label then
