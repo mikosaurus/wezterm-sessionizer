@@ -38,9 +38,7 @@ M.keys = {
 									end
 								end),
 							}))
-						end
-
-						if label then
+						elseif label then
 							inner_window:perform_action(act.SwitchToWorkspace({ name = label }), inner_pane)
 						elseif id then
 							inner_window:perform_action(act.SwitchToWorkspace({ name = id }, inner_pane))
