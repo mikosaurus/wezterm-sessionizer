@@ -14,11 +14,32 @@ M.keys = {
 			for _, workspace in ipairs(wezterm.mux.get_workspace_names()) do
 				table.insert(choices, { label = workspace, id = workspace })
 			end
+			local new_workspace_id = "id_new_workspace"
+			table.insert(choices, { label = "Create new workspace", id = new_workspace_id })
 
 			window:perform_action(
-				wezterm.action.InputSelector({
+				act.InputSelector({
 					action = wezterm.action_callback(function(inner_window, inner_pane, id, label)
-						print("selected: ", id, label)
+						if not label and not id then
+							-- nothing was selected (exit)
+							return
+						end
+						if id then
+							if id == new_workspace_id then
+								window:perform_action(act.PromtInputLine({
+									description = "Name for new workspace",
+									action = wezterm.action_callback(function(window, pane, line)
+										if line then
+											inner_window:perform_action(
+												act.SwitchToWorkspace({ name = line }),
+												inner_pane
+											)
+										end
+									end),
+								}))
+							end
+						end
+
 						if label then
 							inner_window:perform_action(act.SwitchToWorkspace({ name = label }), inner_pane)
 						elseif id then
