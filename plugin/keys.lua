@@ -5,42 +5,42 @@ M.keys = {
 	{
 		key = "LeftArrow",
 		mods = "CTRL",
-		actions = wezterm.action.ActivatePaneDirection("Left"),
+		action = wezterm.action.ActivatePaneDirection("Left"),
 	},
 	{
 		key = "H",
 		mods = "CTRL",
-		actions = wezterm.action.ActivatePaneDirection("Left"),
+		action = wezterm.action.ActivatePaneDirection("Left"),
 	},
 	{
 		key = "RightArrow",
 		mods = "CTRL",
-		actions = wezterm.action.ActivatePaneDirection("Right"),
+		action = wezterm.action.ActivatePaneDirection("Right"),
 	},
 	{
 		key = "L",
 		mods = "CTRL",
-		actions = wezterm.action.ActivatePaneDirection("Right"),
+		action = wezterm.action.ActivatePaneDirection("Right"),
 	},
 	{
 		key = "UpArrow",
 		mods = "CTRL",
-		actions = wezterm.action.ActivatePaneDirection("Up"),
+		action = wezterm.action.ActivatePaneDirection("Up"),
 	},
 	{
 		key = "K",
 		mods = "CTRL",
-		actions = wezterm.action.ActivatePaneDirection("Up"),
+		action = wezterm.action.ActivatePaneDirection("Up"),
 	},
 	{
 		key = "DownArrow",
 		mods = "CTRL",
-		actions = wezterm.action.ActivatePaneDirection("Down"),
+		action = wezterm.action.ActivatePaneDirection("Down"),
 	},
 	{
 		key = "J",
 		mods = "CTRL",
-		actions = wezterm.action.ActivatePaneDirection("Down"),
+		action = wezterm.action.ActivatePaneDirection("Down"),
 	},
 }
 
