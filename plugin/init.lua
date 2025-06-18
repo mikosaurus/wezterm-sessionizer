@@ -12,7 +12,7 @@ end
 
 package.path = package.path .. ";" .. findPluginPackagePath("https://github.com/mikosaurus/wezterm-sessionizer")
 
-local keys = dofile("keys.lua")
+local keys = require("keys")
 
 local M = {}
 
