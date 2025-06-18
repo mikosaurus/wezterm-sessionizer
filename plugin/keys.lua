@@ -1,46 +1,47 @@
 local wezterm = require("wezterm")
+local act = wezterm.action
 
 local M = {}
 M.keys = {
 	{
 		key = "LeftArrow",
 		mods = "CTRL",
-		action = wezterm.action.ActivatePaneDirection("Left"),
+		action = act.ActivatePaneDirection("Left"),
 	},
 	{
-		key = "H",
+		key = "h",
 		mods = "CTRL",
-		action = wezterm.action.ActivatePaneDirection("Left"),
+		action = act.ActivatePaneDirection("Left"),
 	},
 	{
 		key = "RightArrow",
 		mods = "CTRL",
-		action = wezterm.action.ActivatePaneDirection("Right"),
+		action = act.ActivatePaneDirection("Right"),
 	},
 	{
-		key = "L",
+		key = "l",
 		mods = "CTRL",
-		action = wezterm.action.ActivatePaneDirection("Right"),
+		action = act.ActivatePaneDirection("Right"),
 	},
 	{
 		key = "UpArrow",
 		mods = "CTRL",
-		action = wezterm.action.ActivatePaneDirection("Up"),
+		action = act.ActivatePaneDirection("Up"),
 	},
 	{
-		key = "K",
+		key = "k",
 		mods = "CTRL",
-		action = wezterm.action.ActivatePaneDirection("Up"),
+		action = act.ActivatePaneDirection("Up"),
 	},
 	{
 		key = "DownArrow",
 		mods = "CTRL",
-		action = wezterm.action.ActivatePaneDirection("Down"),
+		action = act.ActivatePaneDirection("Down"),
 	},
 	{
-		key = "J",
+		key = "j",
 		mods = "CTRL",
-		action = wezterm.action.ActivatePaneDirection("Down"),
+		action = act.ActivatePaneDirection("Down"),
 	},
 }
 
