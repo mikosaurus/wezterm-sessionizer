@@ -1,3 +1,5 @@
+local wezterm = require("wezterm")
+
 local M = {}
 M.keys = {
 	{
@@ -41,3 +43,5 @@ M.keys = {
 		actions = wezterm.action.ActivatePaneDirection("Down"),
 	},
 }
+
+return M
