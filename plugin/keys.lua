@@ -4,7 +4,7 @@ local act = wezterm.action
 local M = {}
 M.keys = {
 
-	-- Worspaces
+	-- Workspaces
 	{
 		key = "p",
 		mods = "LEADER|CTRL",
@@ -15,17 +15,20 @@ M.keys = {
 				table.insert(choices, { label = workspace })
 			end
 
-			window:perform_action(wezterm.action.InputSelector({
-				action = wezterm.action_callback(function(inner_window, inner_pane, id, label)
-					if label then
-						inner_window:perform_action(wezterm.action.SwitchToWorkspace({ name = label }), inner_pane)
-					end
-				end),
-				title = "Go to",
-				choices = choices,
-				fuzzy = true,
-				fuzzy_description = "Goto Workspace: ",
-			}, pane))
+			window:perform_action(
+				wezterm.action.InputSelector({
+					action = wezterm.action_callback(function(inner_window, inner_pane, id, label)
+						if label then
+							inner_window:perform_action(wezterm.action.SwitchToWorkspace({ name = label }), inner_pane)
+						end
+					end),
+					title = "Go to",
+					choices = choices,
+					fuzzy = true,
+					fuzzy_description = "Goto Workspace: ",
+				}),
+				pane
+			)
 		end),
 		-- action = act.ShowLauncherArgs({
 		-- 	flags = "FUZZY|WORKSPACES",
