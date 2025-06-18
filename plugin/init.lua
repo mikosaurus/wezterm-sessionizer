@@ -16,7 +16,6 @@ local keys = require("keys")
 local M = {}
 
 M.apply_to_config = function(config)
-	config.disable_default_key_bindingd = true
 	config.keys = keys.keys
 end
 
