@@ -1,6 +1,8 @@
 Sessionizer:
     ✔ Setup basic plugin structure
     ☐ Set up keybinds
+        # This should go into the readme how to setup keybinds and whats available
+        # not sure if i should setup default keybinds
         # ctrl space for leader
         # leader c for new pane?
         # leader d for detatch session?
