@@ -52,6 +52,11 @@ M.keys = {
 	-- Activate copy mode
 	{
 		key = "ø",
+		mods = "LEADER|CTRL",
+		action = act.ActivateCopyMode,
+	},
+	{
+		key = "ø",
 		mods = "LEADER",
 		action = act.ActivateCopyMode,
 	},
