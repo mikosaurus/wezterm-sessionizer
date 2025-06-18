@@ -7,7 +7,7 @@ M.keys = {
 	-- Section for tabs
 	{
 		key = "c",
-		mods = "leader",
+		mods = "LEADER",
 		action = act.SpawnWindow,
 	},
 	{
