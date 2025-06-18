@@ -97,8 +97,8 @@ M.keys = {
 
 	-- Copy and paste
 	{
-		key = "C",
-		mods = "CTRL",
+		key = "c",
+		mods = "CTRL|SHIFT",
 		action = act.CopyTo("ClipboardAndPrimarySelection"),
 	},
 	{
