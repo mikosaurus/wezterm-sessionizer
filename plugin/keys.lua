@@ -61,6 +61,13 @@ M.keys = {
 		action = act.ActivateCopyMode,
 	},
 
+	-- clear screen
+	{
+		key = "l",
+		mods = "LEADER|CTRL",
+		action = act.SendKey({ key = "l", mods = "CTRL" }),
+	},
+
 	-- Section for moving between panes
 	{
 		key = "LeftArrow",
