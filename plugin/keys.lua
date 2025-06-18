@@ -19,13 +19,16 @@ M.keys = {
 				wezterm.action.InputSelector({
 					action = wezterm.action_callback(function(inner_window, inner_pane, id, label)
 						if label then
-							inner_window:perform_action(wezterm.action.SwitchToWorkspace({ name = label }), inner_pane)
+							inner_window:perform_action(act.SwitchToWorkspace({ name = label }), inner_pane)
+						elseif id then
+							inner_window:perform_action(act.SwitchToWorkspace({ name = id }, inner_pane))
 						end
 					end),
 					title = "Go to",
 					choices = choices,
 					fuzzy = true,
 					fuzzy_description = "Goto Workspace: ",
+					alphabet = "1234567890abcdefghijklmnopqrstuvwxyz",
 				}),
 				pane
 			)
