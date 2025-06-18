@@ -1,5 +1,5 @@
 -- local wezterm = require("wezterm")
-local keys = require("lua.keys")
+local keys = dofile("keys.lua")
 
 local M = {}
 
