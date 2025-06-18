@@ -12,6 +12,11 @@ M.keys = {
 			flags = "FUZZY|WORKSPACES",
 		}),
 	},
+	{
+		key = "å",
+		mods = "LEADER|CTRL",
+		action = act.ShowLauncher,
+	},
 
 	-- Section for tabs
 	{
