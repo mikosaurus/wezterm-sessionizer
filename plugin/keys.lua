@@ -4,6 +4,15 @@ local act = wezterm.action
 local M = {}
 M.keys = {
 
+	-- Worspaces
+	{
+		key = "p",
+		mods = "LEADER|CTRL",
+		action = act.ShowLauncherArgs({
+			flags = "FUZZY|WORKSPACES",
+		}),
+	},
+
 	-- Section for tabs
 	{
 		key = "c",
@@ -24,14 +33,14 @@ M.keys = {
 	-- Splitting tab in panes
 	{
 		key = "æ",
-		mods = "ALT",
+		mods = "LEADER",
 		action = act.SplitPane({
 			direction = "Right",
 		}),
 	},
 	{
 		key = "'",
-		mods = "ALT",
+		mods = "LEADER",
 		action = act.SplitPane({
 			direction = "Down",
 		}),
