@@ -1,8 +1,21 @@
 local wezterm = require("wezterm")
+local workspace = require("workspace")
 local act = wezterm.action
 
 local M = {}
 M.keys = {
+
+	-- Workspaces
+	{
+		key = "p",
+		mods = "LEADER|CTRL",
+		action = workspace.workspacefzf,
+	},
+	{
+		key = "å",
+		mods = "LEADER|CTRL",
+		action = act.ShowLauncher,
+	},
 
 	-- Section for tabs
 	{
