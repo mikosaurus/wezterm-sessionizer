@@ -1,9 +1,22 @@
 local wezterm = require("wezterm")
 local workspace = require("workspace")
+local domains = require("domains")
 local act = wezterm.action
 
 local M = {}
 M.keys = {
+
+	-- Domains
+	{
+		key = "fd",
+		mods = "LEADER|CTRL",
+		action = domains.domainfzf,
+	},
+	{
+		key = "fd",
+		mods = "LEADER",
+		action = domains.domainfzf,
+	},
 
 	-- Workspaces
 	{

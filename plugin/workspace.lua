@@ -20,6 +20,7 @@ M.workspacefzf = wezterm.action_callback(function(window, pane)
 					-- nothing was selected (exit)
 					return
 				end
+
 				if id and id == new_workspace_id then
 					inner_window:perform_action(
 						act.PromptInputLine({
